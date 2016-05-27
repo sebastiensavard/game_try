@@ -1,0 +1,97 @@
+// game_try
+// first attempt at a text-based game, also practicing git skills
+
+extern crate rand;
+use rand::distributions::{IndependentSample, Range};
+
+fn dice_roll(sides: u8) -> u8 {
+//	return rand::random::<u8>() % 6;
+
+let between = Range::new(0,sides);
+let mut rng = rand::thread_rng();
+return between.ind_sample(&mut rng);
+}
+
+
+
+ fn main() {
+    println!("your dice roll is:{}", dice_roll(6));
+
+
+// Establish characters and attributes
+
+//Character
+//	- Name: Space Marine
+//	- Starting health 100/100
+//	- strength x/10
+
+	let mut sm_hlth : i32;
+	let mut sm_str : i32;
+
+//Opponent
+//	- Name: Chaos Demon
+//	- Starting health 100/100
+//	- strength x/10
+
+	let mut cd_hlth : i32;
+	let mut cd_str : i32;
+
+// use dice_roll to determine strength and assign that strength to each player's attributes
+	cd_str = rand
+	println!("your opponent's strength is {}, cd_str);
+
+	sm_str = rand
+	println!("your strength is {}, sm_str);
+
+// Basic action loop
+
+// Player rolls dice to determine hit/miss.	
+// If hit, go to hit loop
+// if miss, turn ends and Opponent performs action loop
+// continue untill one player's health is zero
+
+
+//hit/miss
+	println!("you roll {}", dice_roll(6)) 	
+		if (roll_value % 2 == 0)
+			then goto hit loop
+		else turn ends
+
+// Space Marine Hit Loop: If player rolls even for hit/miss action, perform this loop
+
+	while cd_hlth >= 0 && sm_hlth >= 0 {
+				(dice_roll*sm_str) = damage_done
+				(cd_hlth-damage_done) = cd_hlth
+	
+	// roll dice again to determine if next action is hit/miss
+		fn(dice_roll)
+	//			if hit, redo hit loop
+	//			if miss, exit loop and go to next player
+		
+
+}
+
+// Chaos Demon Hit Loop
+
+	while cd_hlth >= 0 && sm_hlth >= 0 {
+				(dice_roll*cd_str) = damage_done
+				(sm_hlth-damage_done) = sm_hlth
+	// roll dice again to determine if next action is hit/miss
+		fn(dice_roll)
+	//			if hit, redo hit loop
+	//			if miss, exit loop and go to next player
+
+
+
+}
+
+********figure out how to make action loop exit when one player health is zero
+********figure out how to invoke (call?) dice roll function
+********actually write in code
+
+//	program terminates with output message
+//	- if character wins, "congratulations, you win"
+//	- if opponent wins, "you lose"
+
+
+}
