@@ -20,22 +20,30 @@ fn main() {
 // dice roll of 2 instead of complex odd or evens. Just roll a 2 sided die, 1 is hit 0 is miss
 // commenting out just to test something else
 //	let mut hit_or_miss = dice_roll(2);
-	
+
 // while loop attemp
 	while cd_hlth >= 0 && sm_hlth >= 0 {
-	let mut hit_or_miss = dice_roll(2);
-	println!("Roll to hit or miss {}", hit_or_miss);
-	if hit_or_miss == 1 {
-		let mut cd_hlth = cd_hlth - (dice_roll(6)*sm_str);}
-	else {println!("You missed, Chaos Demon will now roll");}
- 	
-	println!("Chaos Demon Health {}", cd_hlth);	
 
-	println!("Chaos Demon now rolls {}", hit_or_miss);
-	if hit_or_miss == 1 {
-		let mut sm_hlth = sm_hlth - (dice_roll(6)*cd_str);}
-	else {println!("Chaos Demon missed, Space Marine will now roll");}
-					
+		let mut hit_or_miss = dice_roll(2);
+		println!("Roll to hit or miss {}", hit_or_miss);
+		if hit_or_miss == 1 {
+			let mut cd_hlth = cd_hlth - (dice_roll(6)*sm_str);
+		}
+		else {
+			println!("You missed, Chaos Demon will now roll");
+		}
+
+		println!("Chaos Demon Health {}", cd_hlth);
+		println!("Chaos Demon now rolls {}", hit_or_miss);
+
+		if hit_or_miss == 1
+		{
+			let mut sm_hlth = sm_hlth - (dice_roll(6)*cd_str);
+		}
+		else {
+			println!("Chaos Demon missed, Space Marine will now roll");
+		}
+
 
 }
 
